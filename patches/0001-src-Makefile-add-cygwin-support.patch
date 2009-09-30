@@ -1,15 +1,15 @@
-From bfa800c7574b6bee96846eb521d1aeac161b34c0 Mon Sep 17 00:00:00 2001
+From 7da072af147de3583dd2083d1de3cbd7f9ea2082 Mon Sep 17 00:00:00 2001
 From: Jari Aalto <jari.aalto@cante.net>
-Date: Wed, 30 Sep 2009 14:54:28 +0300
+Date: Wed, 30 Sep 2009 15:50:10 +0300
 Subject: [PATCH] src/Makefile: add cygwin support
 
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
- src/Makefile |   45 +++++++++++++++++++++++++--------------------
- 1 files changed, 25 insertions(+), 20 deletions(-)
+ src/Makefile |   47 ++++++++++++++++++++++++++---------------------
+ 1 files changed, 26 insertions(+), 21 deletions(-)
 
 diff --git a/src/Makefile b/src/Makefile
-index fac93ea..a3062e3 100644
+index fac93ea..f5c2d5a 100644
 --- a/src/Makefile
 +++ b/src/Makefile
 @@ -76,10 +76,6 @@ INSTALL_OBJS_DOC   = \
@@ -101,6 +101,15 @@ index fac93ea..a3062e3 100644
  	@echo "-- $(PACKAGE) Makefile settings end --"
  
  $(BIN): status $(OBJS1)
+@@ -306,7 +311,7 @@ $(POT) : wcd.c wcddir.c stack.c display.c graphics.c wfixpath.c c3po/Error.c
+ 	xgettext -C --keyword=_ $+ -o $(POT)
+ 
+ ../doc/$(PACKAGE).txt : man/man1/wcd.1
+-	man -M ./man wcd | col -b > $@
++	nroff -man man/man1/wcd.1 | col -bx > $@
+ 
+ ../doc/$(PACKAGE).ps : man/man1/wcd.1
+ 	man -M ./man -t wcd > $@
 @@ -383,9 +388,9 @@ install-man: $(INSTALL_OBJS_MAN1)
  
  install-bin: $(BIN)
