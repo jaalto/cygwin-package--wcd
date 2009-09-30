@@ -1,0 +1,8 @@
+# This file contains extra options when files are
+# installed. The options are given one option per line.
+
+--exclude=BUILD*
+--exclude=INSTALL*
+--exclude=translate.txt
+--exclude=dosdir.txt
+--exclude=copying.dj
