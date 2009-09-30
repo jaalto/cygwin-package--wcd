@@ -1,0 +1,68 @@
+wcd
+------------------------------------------
+
+Wherever Change Directory with wildcards. 
+
+Wcd manages cache of directories and user can jump to any of the cache
+(sub)directories.-tree. The directory searches can be expressed with
+partial names or with wildcards * ? [SET] and [^SET].
+
+Runtime requirements:
+  cygwin-1.5.x or newer
+
+Build requirements:
+  cygwin-1.5.x or newer
+
+Canonical homepage:
+  http://sourceforge.net/projects/wcd/ (No CVS tree)
+  http://www.gnu.org/directory/all/wcd.html  
+
+Canonical download:
+  See above
+
+Upstream contact:
+  Author: Erwin Waterlander <waterlan@users.sourceforge.net>
+
+------------------------------------
+
+Build instructions:
+  You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
+  unpack wcd-3.1.3-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./wcd*.sh all
+
+This will create:
+  wcd-3.1.3-1.tar.bz2
+  wcd-3.1.3-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+etc/profile.d/wcd.sh
+usr/bin/wcd.exe
+usr/share/doc/Cygwin/wcd-3.1.3.README
+usr/share/doc/wcd-3.1.3/INSTALL
+usr/share/doc/wcd-3.1.3/README
+usr/share/doc/wcd-3.1.3/copying.txt
+usr/share/doc/wcd-3.1.3/dosdir.txt
+usr/share/doc/wcd-3.1.3/faq.txt
+usr/share/doc/wcd-3.1.3/source.txt
+usr/share/doc/wcd-3.1.3/wcd.1.html
+usr/share/doc/wcd-3.1.3/wcd.txt
+usr/share/doc/wcd-3.1.3/whatsnew.txt
+
+------------------
+
+Port Notes:
+
+- This port is based on sourceforge.
+- Wrote /etc/profile.d/wcd.sh; wcd.exe cannot be used without bash alias.
+
+----- version 3.1.3-1 -----
+Initial release
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@poboxes.com>
+
