@@ -1,0 +1,59 @@
+-- Copyright (C) 2004-2009 Jari Aalto; Licensed under GPL v2 or later
+To: cygwin-announce@cygwin.com
+Subject: Updated: wcd 5.0.4~20090930+svn219-1 -- Wherever Change Directory
+
+PACKAGE DESCRIPTION
+===================
+
+Homepage: http://freshmeat.net/projects/wcd
+License : GPL
+
+Wcd manages cache of directories and user can jump to any of the cache
+(sub)directories and tree. The directory searches can be expressed
+with partial names or with wildcards.
+
+CHANGES SINCE LAST RELEASE
+==========================
+
+See /usr/share/doc/wcd-*/whatsnew.txt
+and http://www.xs4all.nl/~waterlan/whatsnew.txt
+
+INSTALL OR UPGRADE NOTES
+========================
+
+None.
+
+The wcd alias is defined on shell startup file /etc/profile.d/wcd.sh
+
+CYGWIN INSTALLATION INFORMATION
+===============================
+
+To install this package, click on the "Install Cygwin now" link on the
+<http://cygwin.com/> web page. This downloads setup.exe to your
+system. Then, run setup and answer all of the questions. You'll find
+the package listed in the "All" category. After installation, read the
+documentation at directories:
+
+    /usr/share/doc/<package-version>/*
+    /usr/share/doc/Cygwin/<package-version>.README
+
+If you have questions or comments, please send them to the Cygwin
+mailing list at <cygwin@cygwin.com>.
+
+CYGWIN-ANNOUNCE UNSUBSCRIBE INFO
+================================
+
+This message has been sent to cygwin-announce list.
+
+If you want to unsubscribe from the mailing list, look at the
+"List-Unsubscribe: " tag in the email header of this message. Send
+email to the address specified there. It will be in the format:
+
+    cygwin-announce-unsubscribe-you=yourdomain.com@cygwin.com
+
+More information on unsubscribing can be found:
+
+    http://sources.redhat.com/lists.html#unsubscribe-simple
+
+Please read *all* of the information on unsubscribing that is available
+starting at the above URL.
