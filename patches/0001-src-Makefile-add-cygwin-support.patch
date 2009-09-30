@@ -1,0 +1,119 @@
+From bfa800c7574b6bee96846eb521d1aeac161b34c0 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Wed, 30 Sep 2009 14:54:28 +0300
+Subject: [PATCH] src/Makefile: add cygwin support
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ src/Makefile |   45 +++++++++++++++++++++++++--------------------
+ 1 files changed, 25 insertions(+), 20 deletions(-)
+
+diff --git a/src/Makefile b/src/Makefile
+index fac93ea..a3062e3 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -76,10 +76,6 @@ INSTALL_OBJS_DOC   = \
+   ../doc/$(PACKAGE).ps \
+   ../doc/$(PACKAGE).pdf \
+   ../doc/whatsnew.txt \
+-  ../doc/INSTALL.dos_windows.txt \
+-  ../doc/INSTALL.unix.txt \
+-  ../doc/INSTALL.os2.txt \
+-  ../doc/INSTALL.rpm.txt \
+   ../doc/README.txt \
+   ../doc/problems.txt \
+   ../doc/translate.txt \
+@@ -165,6 +161,9 @@ endif
+ 
+ # ......................................................... OS flags ...
+ 
++# Doesn't work everywhere: -o option is not supported by SunOS
++# OS = $(shell uname -o)
++
+ OS =
+ 
+ ifndef OS
+@@ -179,6 +178,11 @@ ifneq (, $(wildcard /cygdrive/c))
+ endif
+ endif
+ 
++ifeq (cygwin,$(OS))
++	LDFLAGS_EXTRA = -lintl -lmpr -Wl,--enable-auto-import
++endif
++
++
+ ifndef OS
+ ifeq (FreeBSD, $(shell uname -s))
+ 	OS = freebsd
+@@ -187,7 +191,7 @@ endif
+ 
+ ifeq (freebsd,$(OS))
+ 	# Running under FreeBSD
+-	CFLAGS_BSD   = -I/usr/local/include
++	CFLAGS_OS     = -I/usr/local/include
+ 	LDFLAGS_EXTRA = -lintl -L/usr/local/lib
+ endif
+ 
+@@ -209,8 +213,8 @@ endif
+ endif
+ 
+ ifeq (hpux,$(OS))
+-	# Running under HP-UX
+ 	EXTRA_DEFS += -Dhpux -D_HPUX_SOURCE -D_XOPEN_SOURCE_EXTENDED
++	# These flags were for native HP compiler
+ 	# CFLAGS_OS = -O -Aa
+ endif
+ 
+@@ -236,7 +240,6 @@ CFLAGS		= -Ic3po \
+ 		  $(GCCFLAGS) \
+ 		  $(CFLAGS_OS) \
+ 		  $(CFLAGS_UCS) \
+-		  $(CFLAGS_BSD) \
+ 		  $(WDEFS) \
+ 		  $(NLSDEFS) \
+ 		  $(NCFLAG) \
+@@ -272,16 +275,18 @@ all: $(BIN) $(MOFILES) $(DOCFILES)
+ 
+ status:
+ 	@echo "-- $(PACKAGE) Makefile settings begin --"
+-	@echo "OS	   = $(OS)"
+-	@echo "prefix	   = $(prefix)"
+-	@echo "STATIC	   = $(STATIC)"
+-	@echo "UCS	   = $(UCS)"
+-	@echo "ENABLE_NLS  = $(ENABLE_NLS)"
+-	@echo "CURSES	   = $(CURSES)"
+-	@echo "DEFS_CURSES = $(DEFS_CURSES)"
+-	@echo "EXTRA_DEFS  = $(EXTRA_DEFS)"
+-	@echo "CFLAGS	   = $(CFLAGS)"
+-	@echo "DEFS	   = $(DEFS)"
++	@echo "OS            = $(OS)"
++	@echo "prefix        = $(prefix)"
++	@echo "STATIC        = $(STATIC)"
++	@echo "UCS           = $(UCS)"
++	@echo "ENABLE_NLS    = $(ENABLE_NLS)"
++	@echo "CURSES        = $(CURSES)"
++	@echo "DEFS          = $(DEFS)"
++	@echo "DEFS_CURSES   = $(DEFS_CURSES)"
++	@echo "EXTRA_DEFS    = $(EXTRA_DEFS)"
++	@echo "LDFLAGS_EXTRA = $(LDFLAGS_EXTRA)"
++	@echo "CFLAGS        = $(CFLAGS)"
++	@echo "CFLAGS_OS     = $(CFLAGS_OS)"
+ 	@echo "-- $(PACKAGE) Makefile settings end --"
+ 
+ $(BIN): status $(OBJS1)
+@@ -383,9 +388,9 @@ install-man: $(INSTALL_OBJS_MAN1)
+ 
+ install-bin: $(BIN)
+ 	# install-bin
+-	#$(INSTALL_BIN) -d $(BINDIR)
+-	$(MKDIR) -p $(BINDIR)
+-	$(INSTALL_BIN) $(INSTALL_OBJS_BIN) $(BINDIR)
++	#$(INSTALL_BIN) -d $(LIBDIR)
++	$(MKDIR) -p $(LIBDIR)
++	$(INSTALL_BIN) $(INSTALL_OBJS_BIN) $(LIBDIR)
+ 
+ install: install-bin install-man install-doc install-mo
+ 
+-- 
+1.6.1.2
+
