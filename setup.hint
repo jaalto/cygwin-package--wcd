@@ -1,7 +1,7 @@
 sdesc: "Wherever Change Directory with wildcards."
 ldesc: "Wcd manages cache of directories and user can jump to any of
-the cache (sub)directories.-tree. The directory searches can be
-expressed with partial names or with wildcards * ? [SET] and [^SET]."
+the cache (sub)directories and trees. The directory searches can be
+expressed with partial names or with wildcards"
 category: Utils
-requires: cygwin 
+requires: cygwin
 

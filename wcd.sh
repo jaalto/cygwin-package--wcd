@@ -1,33 +1,29 @@
-#  Define alias wcd()
 #
-#  wcd(1) cannot itself change directories, so it must be done
-#  in shell script.
+#  Copyright (C) 2004-2009 Jari Aalto; Licensed under GPL v2 or later
 #
-#  This file should be source's from ~/.bashrc placed in 
+#  Define a shell alias for wcd. wcd(1) cannot itself change
+#  directories, so it must be done in shell script.
+#
+#  This file should be source's from ~/.bashrc placed in
 #  /etc/profile.d/
 
-xxtmp=/usr/bin/wcd 
+xxtmp=/usr/lib/wcd/wcd
 
-if [ -x $xxtmp ] && [ ! -z "$HOME" ] && [ -d "$HOME" ]
+if [ -x "$xxtmp" ] && [ "$HOME" ] && [ -d "$HOME" ]
 then
 
-    dir=$HOME/bin
-
-    if [ ! -d $dir ]; then
-	mkdir -p $dir || return
-    fi
-
-    unset dir
-
-
-    wcd()
+    wcd ()
     {
-        local go=$HOME/bin/wcd.go
-	rm -f $go 2> /dev/null
+	[ -d "$HOME/.wcd/bin" ] || mkdir -p "$HOME/.wcd/bin"
 
-	/usr/bin/wcd $*
+	go="$HOME/.wcd/bin/wcd.go"
+	rm -f "$go" 2> /dev/null
 
-	[ -f $go ] && source $go
+	/usr/lib/wcd/wcd "$@"
+
+	[ -f "$go" ] && . "$go"
+
+	unset go
     }
 
 fi
