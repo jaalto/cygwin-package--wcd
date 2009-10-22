@@ -1,7 +1,7 @@
 #
 #  Copyright (C) 2004-2009 Jari Aalto; Licensed under GPL v2 or later
 #
-#  Define a shell alias for wcd. wcd(1) cannot itself change
+#  Define a shell alias for wcd(1), which itself change
 #  directories, so it must be done in a shell alias.
 #
 #  This file is in /etc/profile.d/ and it should be sourced from
