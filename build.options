@@ -1,0 +1,8 @@
+# Just before make(1) is about to be run, this file is sourced
+
+# Options for make(1) command line
+#
+# - Cygwin does not have libncursesw so unicode UCS=1 cannot
+#   be enabled.
+
+CYGBUILD_MAKEFLAGS="CPP_FLAGS_POD=-Dunix"
