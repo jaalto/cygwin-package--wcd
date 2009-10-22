@@ -1,6 +1,7 @@
 # This file contains extra options passed to diff(1) when [makepatch] command
 # is run. The options are given one option per line.
 
+
 # Generated files
 --exclude=*.pot
 --exclude=*.mo
