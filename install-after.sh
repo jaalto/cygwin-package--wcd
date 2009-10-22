@@ -19,7 +19,7 @@ Main()
 {
     root=${1:-".inst"}
 
-    if [ ! -z "$root"  ] && [ -d "$root" ]; then
+    if [ "$root" ] && [ -d "$root" ]; then
 
         dir=$root/etc/profile.d
 
