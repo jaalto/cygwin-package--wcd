@@ -1,4 +1,4 @@
-sdesc: "Wherever Change Directory with wildcards."
+sdesc: "Wherever Change Directory with wildcards"
 ldesc: "Manage cache of directories. Jump to any of
 the cache (sub)directories and trees. The directory searches can be
 expressed with partial names or with wildcards"
