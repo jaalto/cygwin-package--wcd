@@ -5,3 +5,8 @@
 # Generated files
 --exclude=*.pot
 --exclude=*.mo
+
+# Ignore manual page files (generated)
+--exclude=wcd.html
+--exclude=wcd.txt
+--exclude=wcd.ps
