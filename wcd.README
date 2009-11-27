@@ -50,15 +50,15 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack wcd-5.0.4~20090930+svn219-1-src.tar.bz2
+  unpack wcd-5.1.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wcd*.sh all
 
 This will create:
-  wcd-5.0.4~20090930+svn219-1.tar.bz2
-  wcd-5.0.4~20090930+svn219-1-src.tar.bz2
+  wcd-5.1.0-1.tar.bz2
+  wcd-5.1.0-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -69,8 +69,12 @@ Files included in the binary distro:
 
 Port Notes:
 
+----- version 5.1.0-1 -----
+- New upstream release 2009-11-27 Jari Aalto
+
 ----- version 5.1.0~20091022+svn270-1 -----
 - New upstream release 2009-10-21 Jari Aalto
+- private. Not submitted to Cygwin.
 
 ----- version 3.1.3-1 -----
 - Initial release 2004-03-09 Jari Aalto
