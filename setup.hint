@@ -3,4 +3,4 @@ ldesc: "Manage cache of directories. Jump to any of
 the cache (sub)directories and trees. The directory searches can be
 expressed with partial names or with wildcards"
 category: Utils
-requires: cygwin libintl8 libncurses9
+requires: libintl8 libncurses9
