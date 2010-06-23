@@ -1,0 +1,30 @@
+From d765ec2791997412779fa344ed622093afa57dbd Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Wed, 23 Jun 2010 19:45:38 +0300
+Subject: [PATCH] src/Makefile: (%.pdf): Under Cygwin ignore status code 128
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ src/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/Makefile b/src/Makefile
+index 90efc7c..a8778b9 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -362,7 +362,7 @@
+ 	$(CC) $(CFLAGS) $(EXTRA_CFLAGS) $(DEFS) -c $< -o $@
+ 
+ %.pdf: %.ps
+-	ps2pdf $< $@
++	ps2pdf $< $@ || :
+ 
+ %.po : $(POT)
+ 	msgmerge -U $@ $(POT) --backup=numbered
+-- 
+1.7.1
+
