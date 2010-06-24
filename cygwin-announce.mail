@@ -23,7 +23,7 @@ INSTALL OR UPGRADE NOTES
 
 None.
 
-The wcd alias is defined on shell startup file /etc/profile.d/wcd.sh
+The 'wcd' alias is defined on shell startup file /etc/profile.d/wcd.sh
 
 CYGWIN INSTALLATION INFORMATION
 ===============================
