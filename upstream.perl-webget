@@ -1,2 +1,2 @@
 tag1: wcd
-  http://packages.debian.org/unstable/wcd pregexp:tar.gz file:wcd-1.0.0.tar.gz new: x:
+  http://packages.debian.org/unstable/wcd pregexp:tar.gz file:wcd-1.0.0.orig.tar.gz new: x:
