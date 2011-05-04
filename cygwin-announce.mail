@@ -1,6 +1,5 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: wcd 5.1.4-1 -- Wherever Change Directory
---text follows this line--
+Subject: Updated: wcd 5.1.4-2 -- Wherever Change Directory
 
 PACKAGE DESCRIPTION
 ===================
@@ -15,8 +14,14 @@ with partial names or with wildcards.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See /usr/share/doc/wcd-*/whatsnew.txt
-and http://www.xs4all.nl/~waterlan/whatsnew.txt
+Cygwin:
+
+- Correct wcd() alias scripts (csh, sh).
+
+Upstream:
+
+- See /usr/share/doc/wcd-*/whatsnew.txt
+- http://www.xs4all.nl/~waterlan/whatsnew.txt
 
 INSTALL OR UPGRADE NOTES
 ========================
@@ -38,7 +43,7 @@ documentation at directories:
     /usr/share/doc/Cygwin/<package-version>.README
 
 If you have questions or comments, please send them to the Cygwin
-mailing list at <cygwin@cygwin.com>.
+mailing list at <cygwin(at)cygwin.com>.
 
 CYGWIN-ANNOUNCE UNSUBSCRIBE INFO
 ================================
@@ -49,7 +54,7 @@ If you want to unsubscribe from the mailing list, look at the
 "List-Unsubscribe: " tag in the email header of this message. Send
 email to the address specified there. It will be in the format:
 
-    cygwin-announce-unsubscribe-you=yourdomain.com@cygwin.com
+    cygwin-announce-unsubscribe-you=yourdomain.com(at)cygwin.com
 
 More information on unsubscribing can be found:
 
