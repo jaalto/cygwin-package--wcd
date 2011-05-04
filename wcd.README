@@ -7,6 +7,12 @@ Wcd manages cache of directories and user can jump to any of the cache
 (sub)directories and tree. The directory searches can be expressed
 with partial names or with wildcards.
 
+Install NOTE:
+
+If you have customized wcd with $WCDHOME variable under Csh (or Tcsh)
+shell, the supplied default alias does not work. Please define your
+own shell alias based on /etc/profile.d/ snippet in $HOME.cshrc.
+
 Runtime requirements:
   cygwin
   libncurses9
@@ -68,6 +74,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 5.1.4-2 -----
+- Improve shell wcd() function 2011-05-03 Jari Aalto
 
 ----- version 5.1.4-1 -----
 - New upstream release 2011-02-10 Jari Aalto
