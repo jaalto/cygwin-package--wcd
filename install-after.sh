@@ -21,12 +21,6 @@ Main()
 
     if [ "$root" ] && [ -d "$root" ]; then
 
-        dir=$root/etc/profile.d
-
-        Cmd install -m 755 -d $dir
-        Cmd install -m 755 CYGWIN-PATCHES/wcd.sh $dir
-        Cmd install -m 755 CYGWIN-PATCHES/wcd.csh $dir
-
         # Change manual section to 7 (library)
 
 	mandir=$root/usr/share/man/man1
