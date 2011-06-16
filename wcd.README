@@ -23,7 +23,9 @@ Build requirements:
   gettext		(uses: *.po files)
   gettext-devel
   ghostscript		(uses: ps2pdf)
+  libiconv
   libncurses-devel
+  libncursesw-devel
 
 Canonical homepage:
   http://freshmeat.net/projects/wcd
@@ -56,15 +58,15 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack wcd-5.1.4-1-src.tar.bz2
+  unpack wcd-5.1.5-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wcd*.sh all
 
 This will create:
-  wcd-5.1.4-1.tar.bz2
-  wcd-5.1.4-1-src.tar.bz2
+  wcd-5.1.5-1.tar.bz2
+  wcd-5.1.5-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -74,6 +76,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 5.1.5-1 -----
+- New upstream release 2011-06-16 Jari Aalto
 
 ----- version 5.1.4-2 -----
 - Improve shell wcd() function 2011-05-03 Jari Aalto
