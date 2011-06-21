@@ -15,10 +15,6 @@ with partial names or with wildcards.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-Cygwin:
-
-- Correct wcd() alias scripts (csh, sh).
-
 Upstream:
 
 - See /usr/share/doc/wcd-*/whatsnew.txt
