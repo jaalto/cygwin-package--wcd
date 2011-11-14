@@ -15,8 +15,10 @@ own shell alias based on /etc/profile.d/ snippet in $HOME.cshrc.
 
 Runtime requirements:
   cygwin
-  libncurses9
+  libgcc1
+  libncursesw10
   libintl8
+  libunistring0
 
 Build requirements:
   cygwin
@@ -26,6 +28,7 @@ Build requirements:
   libiconv
   libncurses-devel
   libncursesw-devel
+  libunistring-devel
 
 Canonical homepage:
   http://freshmeat.net/projects/wcd
@@ -58,15 +61,15 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack wcd-5.1.5-1-src.tar.bz2
+  unpack wcd-5.2.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wcd*.sh all
 
 This will create:
-  wcd-5.1.5-1.tar.bz2
-  wcd-5.1.5-1-src.tar.bz2
+  wcd-5.2.0-1.tar.bz2
+  wcd-5.2.0-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -76,6 +79,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 5.2.0-1 -----
+- New upstream release 2011-11-12 Jari Aalto
 
 ----- version 5.1.5-1 -----
 - New upstream release 2011-06-16 Jari Aalto
