@@ -61,15 +61,15 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack wcd-5.2.0-1-src.tar.bz2
+  unpack wcd-5.2.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wcd*.sh all
 
 This will create:
-  wcd-5.2.0-1.tar.bz2
-  wcd-5.2.0-1-src.tar.bz2
+  wcd-5.2.2-1.tar.bz2
+  wcd-5.2.2-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -79,6 +79,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 5.2.2-1 -----
+- New upstream release 2012-09-15 Jari Aalto
 
 ----- version 5.2.0-1 -----
 - New upstream release 2011-11-12 Jari Aalto
@@ -105,4 +108,4 @@ Port Notes:
 - Wrote /etc/profile.d/wcd.sh; wcd.exe cannot be used without an bash alias.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2004-2011 Jari Aalto; Licensed under GPL v2 or later
+Copyright (C) 2004-2012 Jari Aalto; Licensed under GPL v2 or later

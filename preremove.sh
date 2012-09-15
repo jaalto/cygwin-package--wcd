@@ -18,17 +18,17 @@ do
     current="$fromdir/$file"
     to="$dest/$file"
 
-    if [ ! -e "$prev" ]; then	# First installation
+    if [ ! -e "$prev" ]; then        # First installation
         rm -vf "$to"
-	cp -vf "$current" "$prev"
-	continue
+        cp -vf "$current" "$prev"
+        continue
     fi
 
-    if [ -e "$to" ]; then		# Next installations
-	if cmp --quiet "$prev" "$to" ; then
-	    echo "$0: $to hasn't been modified, will update"
-	    rm -vf "$to"
-	fi
+    if [ -e "$to" ]; then            # Next installations
+        if cmp --quiet "$prev" "$to" ; then
+            echo "$0: $to hasn't been modified, will update"
+            rm -vf "$to"
+        fi
     fi
 
     cp -vf "$current" "$prev"
