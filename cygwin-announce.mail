@@ -15,15 +15,13 @@ with partial names or with wildcards.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See /usr/share/doc/wcd*/whatsnew.txt
-and http://waterlan.home.xs4all.nl/whatsnew.txt
+See http://waterlan.home.xs4all.nl/whatsnew.txt
+and /usr/share/doc/wcd*/whatsnew.txt
 
 INSTALL OR UPGRADE NOTES
 ========================
 
-None.
-
-The wcd alias is defined on shell startup file /etc/profile.d/wcd.sh
+Standard install.
 
 CYGWIN INSTALLATION INFORMATION
 ===============================
@@ -34,7 +32,7 @@ system. Then, run setup and answer all of the questions. You'll find
 the package listed in the "All" category. After installation, read the
 documentation at directories:
 
-    /usr/share/doc/<package-version>/*
+    /usr/share/doc/<package>/*
     /usr/share/doc/Cygwin/<package>.README
 
 If you have questions or comments, please send them to the Cygwin
