@@ -7,3 +7,9 @@
 --exclude=translate.txt
 --exclude=dosdir.txt
 --exclude=copying.dj
+--exclude=WATCOMC.txt
+--exclude=INST_DOS.txt
+--exclude=RPM.txt
+--exclude=UNIX.txt
+--exclude=SOURCE.txt
+--exclude=GCC_DOS.txt
