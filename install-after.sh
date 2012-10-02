@@ -36,6 +36,9 @@ Main()
 	echo ">> Change dir structure: section 1 to 7 (library)"
 	Cmd mv $root/usr/share/man/man1 $root/usr/share/man/man7
 
+	echo ">> rm extra doc directory"
+	Cmd rm -rf .inst/usr/share/doc/wcd-*/
+
     fi
 }
 
