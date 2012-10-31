@@ -22,12 +22,12 @@ do
     [ -e "$to"   ] && continue
 
     case "$i" in
-	*/) # Directory
-	    install -d -m 755 "$to"
-	    ;;
-	*)  # File
-	    install -v -m 644 "$from" "$to"
-	    ;;
+        */) # Directory
+            install -d -m 755 "$to"
+            ;;
+        *)  # File
+            install -v -m 644 "$from" "$to"
+            ;;
     esac
 done
 
