@@ -23,10 +23,13 @@ Main()
 
         # Change manual section to 7 (library)
 
+	# find .inst -path "*man*"
+
 	mandir=$root/usr/share/man/man1
 
 	echo ">> Change manpage content: section 1 to 7 (library)"
 
+        Cmd gzip -d $mandir/*.gz
         Cmd mv $mandir/wcd.1 $mandir/wcd.7
 
         Cmd sed --in-place \
