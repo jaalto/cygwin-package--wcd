@@ -10,13 +10,11 @@ Content-Transfer-Encoding: 8bit
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
  src/Makefile |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/src/Makefile b/src/Makefile
-index 90efc7c..a8778b9 100644
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -362,7 +362,7 @@
+@@ -435,7 +435,7 @@ $(BIN): $(OBJS1)
  	$(CC) $(CFLAGS) $(EXTRA_CFLAGS) $(DEFS) -c $< -o $@
  
  %.pdf: %.ps
@@ -25,6 +23,3 @@ index 90efc7c..a8778b9 100644
  
  %.po : $(POT)
  	msgmerge -U $@ $(POT) --backup=numbered
--- 
-1.7.1
-
