@@ -6,7 +6,7 @@ PACKAGE DESCRIPTION
 ===================
 
 Homepage: http://freshmeat.net/projects/wcd
-License : GPL
+License : GPL-2+
 
 Wcd manages cache of directories and user can jump to any of the cache
 (sub)directories and tree. The directory searches can be expressed
