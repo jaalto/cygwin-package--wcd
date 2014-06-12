@@ -1,2 +1,2 @@
 tag1: wcd
-   http://waterlan.home.xs4all.nl/ pregexp:\.\d-src.tar.gz file:wcd-1.0.0.tar.gz new: x:
+   http://waterlan.home.xs4all.nl/ pregexp:\.\d\.tar.gz file:wcd-1.0.0.tar.gz new: x:
