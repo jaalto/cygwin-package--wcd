@@ -18,7 +18,7 @@ Runtime requirements:
   libgcc1
   libncursesw10
   libintl8
-  libunistring0
+  libunistring2
 
 Build requirements:
   cygwin
@@ -61,15 +61,15 @@ Language:
 
 Build instructions:
   You may need cygbuild.sourceforge.net to build *src.tar.bz2 archive
-  unpack wcd-5.2.5-1-src.tar.bz2
+  unpack wcd-5.2.6-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wcd*.sh all
 
 This will create:
-  wcd-5.2.5-1.tar.xz
-  wcd-5.2.5-1-src.tar.xz
+  wcd-5.2.6-1.tar.xz
+  wcd-5.2.6-1-src.tar.xz
 
 -------------------------------------------
 
@@ -79,6 +79,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 5.2.6-1 -----
+- New upstream release 2015-02-11 Jari Aalto
 
 ----- version 5.2.5-1 -----
 - New upstream release 2014-06-13 Jari Aalto
@@ -117,4 +120,4 @@ Port Notes:
 - Wrote /etc/profile.d/wcd.sh; wcd.exe cannot be used without an bash alias.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2004-2014 Jari Aalto; Licensed under GPL v2 or later
+Copyright (C) 2004-2015 Jari Aalto; Licensed under GPL v2 or later
